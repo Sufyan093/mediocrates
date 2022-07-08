@@ -11,6 +11,18 @@ html {
     scroll-behavior: smooth
 }
 
+
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul li {
+    font-family: 'Special Elite', cursive;
+} */
+
  :root {
     --light: #fff;
     --dark: #000
@@ -57,6 +69,20 @@ header {
 
 .color-dark {
     color: #fff
+}
+
+.price .header small {
+    font-size: 17px;
+}
+
+.price .header p {
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 49px;
+}
+
+a.navbar-brand {
+    width: 22%;
 }
 
 @keyframes smoothScroll {
@@ -1060,7 +1086,8 @@ nav ul li a:hover::after {
 .price li {
     border-bottom: 1px solid #eee;
     padding: 20px;
-    text-align: center
+    text-align: center;
+    min-height: 10rem;
 }
 
 .price .grey {
@@ -1140,12 +1167,12 @@ nav ul li a:hover::after {
     font-family: 'Special Elite', cursive;
     font-size: 1.8vw;
     font-weight: 600;
-    padding: 10rem 10rem
+    padding: 5rem 10rem
 }
 
 .meeting-container img {
-    width: 75%;
-    margin: 0 12.5%;
+    width: 100%;
+    /* margin: 0 12.5%; */
     height: auto;
     object-fit: contain;
 }
@@ -1174,10 +1201,11 @@ nav ul li a:hover::after {
 
 .yourJourney-container p {
     color: #3d465a;
-    font-family: 'Special Elite', cursive;
-    font-size: 1.8vw;
+    /* font-family: 'Special Elite', cursive; */
+    font-size: 2vw;
+    margin-top: 5rem;
     font-weight: 600;
-    padding: 10rem 10rem 3rem 10rem
+    /* padding: 10rem 10rem 3rem 10rem;*/
 }
 
 .slider-container {
@@ -1190,7 +1218,7 @@ nav ul li a:hover::after {
     color: #3d465a;
     font-size: 1.8vw;
     font-weight: 500;
-    padding: 10rem 20rem 3rem 20rem
+    /* padding: 10rem 20rem 3rem 20rem */
 }
 
 .slider-container .owl-carousel {
@@ -1295,7 +1323,7 @@ nav ul li a:hover::after {
         color: #3d465a;
         font-size: 2vw;
         font-weight: 500;
-        padding: 10rem 10rem 3rem 10rem
+        /* padding: 10rem 10rem 3rem 10rem */
     }
     .slider-container .owl-carousel p {
         color: #3d465a;
@@ -1374,6 +1402,12 @@ nav ul li a:hover::after {
 }
 
 @media only screen and (max-width:600px) {
+    a.navbar-brand {
+        width: 65%;
+    }
+    #header>nav>div>a>img {
+        width: 72% !important;
+    }
     .cloud-1 {
         margin-top: -13rem !important;
     }
@@ -1451,7 +1485,7 @@ nav ul li a:hover::after {
         color: #3d465a;
         font-size: 3vw;
         font-weight: 500;
-        padding: 5rem 5rem 3rem 5rem
+        /* padding: 5rem 5rem 3rem 5rem */
     }
     .slider-container .owl-carousel {
         background: #f6f5f0;
