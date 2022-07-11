@@ -112,7 +112,7 @@ a.navbar-brand {
 }
 
 .book-content {
-    text-align: justify;
+    text-align: left;
     font-weight: 500
 }
 
@@ -1137,7 +1137,7 @@ nav ul li a:hover::after {
     font-family: 'Special Elite', cursive;
     font-size: 2.5vw;
     font-weight: 800;
-    padding: 20rem 10rem 0rem 10rem
+    padding: 15rem 10rem 0rem 10rem
 }
 
 .shipimg-container p {
@@ -1145,7 +1145,7 @@ nav ul li a:hover::after {
     font-family: 'Special Elite', cursive;
     font-size: 1.8vw;
     font-weight: 500;
-    padding: 5rem 10rem 20rem 10rem
+    padding: 5rem 10rem 10rem 10rem
 }
 
 .shipimg-container img {
@@ -1167,7 +1167,31 @@ nav ul li a:hover::after {
     font-family: 'Special Elite', cursive;
     font-size: 1.8vw;
     font-weight: 600;
-    padding: 5rem 10rem
+    padding: 2rem 7rem
+}
+
+.responsive-mt {
+    margin-top: 15rem;
+}
+
+.child-section img {
+    width: 100%;
+}
+
+.child-section h1 {
+    color: #3d465a;
+    font-family: 'Special Elite', cursive;
+    font-size: 2.8vw;
+    font-weight: 800;
+    margin-top: 5rem;
+}
+
+.child-section p {
+    color: #3d465a;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.8vw;
+    font-weight: 600;
+    margin-top: 5rem;
 }
 
 .meeting-container img {
@@ -1317,7 +1341,7 @@ nav ul li a:hover::after {
         font-family: 'Special Elite', cursive;
         font-size: 2vw;
         font-weight: 600;
-        padding: 5rem 5rem
+        padding: 2rem 5rem
     }
     .slider-container p {
         color: #3d465a;
@@ -1472,7 +1496,7 @@ nav ul li a:hover::after {
         font-family: 'Special Elite', cursive;
         font-size: 3vw;
         font-weight: 600;
-        padding: 5rem 5rem
+        padding: 2rem 5rem
     }
     .yourJourney-container p {
         color: #3d465a;
@@ -1789,6 +1813,12 @@ nav ul li a:hover::after {
             top: 48vh;
             bottom: 0%;
         }
+    }
+    .responsive-mt {
+        margin-top: 0px;
+    }
+    .child-section p {
+        margin-top: 0px;
     }
 }
 
