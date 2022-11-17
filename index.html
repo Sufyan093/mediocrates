@@ -8,27 +8,50 @@
     <title>mediocrates</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link rel="icon" type="image/x-icon" href="images/logo.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="OwlCarousel/dist/assets/owl.theme.default.min.css"> -->
+    <!-- <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"> -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/cus_jquery.js"></script>
+    <script src="assets/gsap/gsap.min.js"></script>
+    <script src="assets/gsap/ScrollTrigger.min.js"></script>
+    <script src="assets/gsap/ScrollToPlugin.min.js"></script>
+    <script src="assets/cus_tweenMax.js"></script>
     <link rel="stylesheet" href="assets/style.css" />
 </head>
 
-<body style="overflow: hidden;">
+<body style="overflow: hidden;" onscroll="bodyScroll();">
     <!-- style="overflow: hidden;" -->
     <!-- PAGE LOADER : PLACE RIGHT AFTER BODY TAG -->
+
     <div class="page-loader">
-        <div class="spinner"></div>
-        <div class="txt">Loading..</div>
+        <!-- <div class="spinner"> -->
+        <img src="images/logo.png" alt="">
+        <!-- </div> -->
+        <div class="txt">Loading
+
+            <div class="snippet" data-title=".dot-pulse">
+                <div class="stage">
+                    <div class="dot-pulse"></div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <!-- PAGE LOADER END : PLACE RIGHT AFTER BODY TAG -->
+    <div class="supper_header">
 
+        <!-- <marquee width="100%" direction="left"> -->
+        <p>This is a sample scrolling text that has scrolls texts to left.</p>
+        <!-- </marquee> -->
+
+    </div>
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white c">
             <div class="container-fluid col-10 mx-auto">
                 <a class="navbar-brand" href="#">
-                    <img src="images/mediocrates_logo.png" style="width: 100%;" alt="" class="image-fluid" />
+                    <img src="images/1664541629295.png" id="header-logo" style="width: 100%;" alt="" class=" image-fluid" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -38,9 +61,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Services</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
@@ -49,12 +72,8 @@
                         </li>
                     </ul>
                     <div class="sb-example-1">
-                        <div class="search">
-                            <input type="text" class="searchTerm" placeholder="" />
-                            <button type="submit" class="searchButton">
-                        <i class="fa fa-search"></i>
-                      </button>
-                        </div>
+                        <a href="" class="btn btn-hero">Login</a>
+                        <a href="" class="btn btn-hero">FIGHT MEDIOCRATES NOW</a>
                     </div>
                 </div>
             </div>
@@ -65,12 +84,14 @@
             <img src="images/Shape1.png" alt="">
         </div>
         <div class="hero-section row">
-            <div class="left-section container col-md-12">
-                <h1>We live in a world where everyone <br/> is pressured to be ordinary…</h1>
-                <p>It's not easy to fight mediocrity, </p>
-                <p>because everyone seems so OK </p>
-                <p>with it - and no one talks about it.</p>
-                <a href="" class="btn btn-hero">Fight Mediocrity Today</a>
+            <div class="left-section container col-md-12" id="floater">
+                <div>
+                    <h1>We live in a world where everyone <br/> is pressured to be ordinary…</h1>
+                    <p>It's not easy to fight mediocrity, </p>
+                    <p>because everyone seems so OK </p>
+                    <p>with it - and no one talks about it.</p>
+                    <a href="" class="btn btn-hero">Fight Mediocrity Today</a>
+                </div>
             </div>
             <div class="right-section">
                 <div class="d-flex justify-content-between row">
@@ -79,11 +100,11 @@
                         <img src="images/carton2.png" alt="" id="icon2" class="icon2 image-fluid">
                         <img src="images/carton2.png" alt="" id="icon3" class="icon3 image-fluid">
                         <img src="images/carton2.png" alt="" id="icon4" class="icon4 image-fluid">
-                        <div class="scrolldown d-none d-md-flex d-lg-flex" id="scrolldown">
+                        <!-- <div class="scrolldown d-none d-md-flex d-lg-flex" id="scrolldown">
                             <p>Follow the Lemming</p>
                             <img src="images/arrow2.png" alt="" id="" class="image-fluid">
 
-                        </div>
+                        </div> -->
                     </div>
                     <div class="right-image right_icons  col-6 col-md-6">
                         <div class="d-flex hero_upper_icon position-relative">
@@ -99,10 +120,11 @@
             </div>
         </div>
         <div class="water-section position-relative">
-            <img src="images/tinified/water_front_bottom.png" alt="">
+            <img src="images/tinified/water_front_bottom.png" loading="lazy" alt="">
             <!-- <img src="images/water_back_top.png" alt=""> -->
         </div>
-        <section class="wrap">
+        <section class="wrap" style="box-shadow: rgb(255 255 255) 0px 42px 31px; position: relative;z-index: 200;">
+            <img src="images/arrow2.png" alt="" id="universal-arrow" class="image-fluid">
             <div class="section color-dark" data-color="dark">
                 <center>
                     <h1 class="blackhead" style="font-size: 150px; white-space: nowrap; font-family: 'Special Elite', cursive;">Try to fight it, and you're "rocking the boat".</h1>
@@ -131,7 +153,7 @@
             <div class="desertuper-section position-relative">
 
             </div>
-            <div class="desert-section">
+            <div class="desert-section" id="desert-section">
                 <div class="top-left">
                     <p>…Rinse and repeat, stacking up soul-sucking days</p>
                     <p>while your abilities, leadership, and motivation</p>
@@ -139,7 +161,7 @@
                 </div>
                 <!-- <img src="images/two.png" alt="" class="img-fluid"> -->
                 <!-- <div class="blackman"> -->
-                <img src="images/one.png" alt="" class="blackmann img-fluid">
+                <img src="images/one.png" alt="" loading="lazy" class="blackmann img-fluid">
                 <!-- </div> -->
 
                 <!-- <div class="position-relative d-none d-md-none d-lg-block">
@@ -149,8 +171,8 @@
 
 
                 <div class="position-relative" style="top: -10%;">
-                    <img src="images/stone.png" alt="" class="blackman-stone babab img-responsive">
-                    <img src="images/man_1.png" alt="" class="blackman-img babab img-responsive">
+                    <img src="images/stone.png" alt="" loading="lazy" class="blackman-stone babab img-responsive">
+                    <img src="images/man_1.png" alt="" loading="lazy" class="blackman-img babab img-responsive">
 
                     <div class="centered">
                         <p data-aos="flip-down">How did we get here?</p>
@@ -174,35 +196,24 @@
         </div> -->
 
         <div class="sky-section position-relative">
-            <div class="uppertext" style="
-               position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 1000;
-    font-size: xx-large;
-    color: black;
-    font-weight: 600;
-    font-family: 'Special Elite', cursive;
-    white-space: nowrap;
-            ">
+            <div class="uppertext" style="position: absolute; top: 2%; left: 50%; transform: translate(-50%, 0); z-index: 1000; font-size: xx-large; color: black; font-weight: 600; font-family: 'Special Elite', cursive; white-space: nowrap;">
                 <center>
                     <p>When did “do just enough”, “shirk responsibility”, and </p>
                     <p>“follow blindly” become so accepted? </p>
                 </center>
             </div>
-            <img src="images/three.png" alt="" class="img-fluid main-cloud" style="margin-top: -5%;">
+            <img src="images/three.png" alt="" loading="lazy" class="img-fluid main-cloud">
             <div class="row">
                 <div class="col-3 col-md-3 col-lg-3"></div>
                 <div class="col-3 col-md-3 col-lg-3"></div>
                 <div class="col-3 col-md-3 col-lg-3"></div>
                 <div class="col-3 col-md-3 col-lg-3">
-                    <img src="images/four.png" alt="" style="width: 75%; margin-left: 33rem; margin-top: -27rem;" class="img-fluid cloud-1">
+                    <img src="images/four.png" alt="" loading="lazy" style="width: 75%; margin-left: 20rem; margin-top: -27rem;" class="img-fluid cloud-1">
                 </div>
             </div>
             <div class="row">
                 <div class="col-3 col-md-4 col-lg-4">
-                    <img src="images/five.png" alt="" style="width: 75%;  margin-left: -33rem;" class="img-fluid cloud-2">
+                    <img src="images/five.png" alt="" loading="lazy" style="width: 75%;  margin-left: -37rem;" class="img-fluid cloud-2">
                 </div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
@@ -212,22 +223,22 @@
                 <div class="col-3 col-md-3 col-lg-3"></div>
                 <div class="col-3 col-md-3 col-lg-3"></div>
                 <div class="col-3 col-md-3 col-lg-3">
-                    <img src="images/four.png" alt="" style="width: 75%;  margin-left: 33rem;" class="img-fluid cloud-3">
+                    <img src="images/four.png" loading="lazy" alt="" style="width: 75%;  margin-left: 23rem;" class="img-fluid cloud-3">
                 </div>
             </div>
 
-            <div style="margin-top: 5%;" class="left-text" data-aos="fade-right">
+            <div style="margin-top: 5%;" class="left-text left-text-sky-section">
                 <p>It's like some ancient philosopher, </p>
                 <p> Mediocrates™, founded an entire movement <br> <span class="block-text1">that extolls “the easy path”.</span></p>
                 <br>
                 <p class="block-text2">that extolls “the easy path”.</p>
-                <p style=" margin-left: 9%; font-weight: 400; ">…and it succeeded.</p>
+                <p class="inner_p">…and it succeeded.</p>
             </div>
 
             <div class="position-relative allstatue statues_section">
-                <img src="images/tinified/statue_alone.png" alt="" class="img-responsive statue1 img-fluid">
-                <img src="images/tinified/background_greek_2.png" alt="" class="img-responsive statue2 img-fluid">
-                <img src="images/tinified/background_greek_1.png" alt="" class="img-responsive statue3 img-fluid">
+                <img src="images/tinified/statue_alone.png" alt="" loading="lazy" class="img-responsive statue1 img-fluid">
+                <img src="images/tinified/background_greek_2.png" alt="" loading="lazy" class="img-responsive statue2 img-fluid">
+                <img src="images/tinified/background_greek_1.png" alt="" loading="lazy" class="img-responsive statue3 img-fluid">
             </div>
 
 
@@ -235,26 +246,26 @@
                 <div class="col-3 col-md-4 col-lg-4"></div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
                 <div class="col-3 col-md-4 col-lg-4">
-                    <img src="images/five.png" alt="" style="margin-left: 33rem;" class="img-fluid cloud-4">
+                    <img src="images/five.png" alt="" loading="lazy" style="margin-left: 40rem;" class="img-fluid cloud-4">
                 </div>
             </div>
             <div class="row mb-5">
                 <div class="col-3 col-md-4 col-lg-4">
-                    <img src="images/five.png" alt="" style="margin-left: -33rem;" class="img-fluid cloud-5">
+                    <img src="images/five.png" alt="" loading="lazy" style="margin-left: -42rem;" class="img-fluid cloud-5">
                 </div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
             </div>
-            <div class="left-text-2 my-5">
+            <div class="left-text-2 my-5 whitehead3">
                 <center>
-                    <p class="cp-1">His philosophy went viral…spreading everywhere, </p>
+                    <p class="cp-1">His philosophy went viral… <br> spreading everywhere, </p>
                     <p class="cp-1">and in everything people do.</p>
                 </center>
             </div>
-            <div class="row mb-5">
+            <div class="row mb-5 mt-5">
                 <div class="col-3 col-md-4 col-lg-4"></div>
                 <div class="col-3 col-md-4 col-lg-4">
-                    <img src="images/five.png" alt="" style="margin-left: 33rem;" class="img-fluid cloud-6">
+                    <img src="images/five.png" alt="" loading="lazy" style="margin-left: 78rem;" class="img-fluid cloud-6">
                 </div>
                 <div class="col-3 col-md-4 col-lg-4"></div>
             </div>
@@ -266,44 +277,54 @@
                 justify-content: space-around;
                 margin-bottom: 10%;
                 opacity: 0.9;">
-                    <img src="images/tinified/balloon_cropped.png" alt="" style=" width: 30%;" class="img-fluid bloon">
+                    <img src="images/tinified/balloon_cropped.png" alt="" loading="lazy" style=" width: 30%;" class="img-fluid bloon">
                 </div>
             </div>
-            <div class="victorian postion-relative mbl-top-margin" style="
-            position: relative;
-        ">
-                <img src="images/tinified/left_buildings.png" alt="" class=" b1 img-responsive img-fluid">
-                <img src="images/tinified/right_buildings.png" alt="" class=" b2 img-responsive img-fluid">
-                <img src="images/tinified/man_phone.png" alt="" class=" b3 img-responsive img-fluid">
-                <img src="images/tinified/flying_man.png" alt="" class=" b4 img-responsive img-fluid">
-                <img src="images/tinified/bottom_ground.png" alt="" class=" b5 img-responsive img-fluid">
-                <img src="images/tinified/guitar_player.png" alt="" class=" b6 img-responsive img-fluid">
-                <img src="images/tinified/man_roller_skates.png" alt="" class=" b7 img-responsive img-fluid">
-                <img src="images/tinified/woman.png" alt="" class=" b8 img-responsive img-fluid">
+            <div class="victorian postion-relative mbl-top-margin" style="position: relative;">
+                <img src="images/tinified/left_buildings.png" alt="" loading="lazy" class=" b1 img-responsive img-fluid">
+                <img src="images/tinified/right_buildings.png" alt="" loading="lazy" class=" b2 img-responsive img-fluid">
+                <img src="images/tinified/man_phone.png" alt="" loading="lazy" class=" b3 img-responsive img-fluid">
+                <img src="images/tinified/flying_man.png" alt="" loading="lazy" class=" b4 img-responsive img-fluid">
+                <img src="images/tinified/bottom_ground.png" alt="" loading="lazy" class=" b5 img-responsive img-fluid">
+                <img src="images/tinified/guitar_player.png" alt="" loading="lazy" class=" b6 img-responsive img-fluid">
+                <img src="images/tinified/man_roller_skates.png" alt="" loading="lazy" class=" b7 img-responsive img-fluid">
+                <img src="images/tinified/woman.png" alt="" loading="lazy" class=" b8 img-responsive img-fluid">
             </div>
 
 
         </div>
         <div class="audience-container ">
-            <center>
+            <!-- <center>
                 <p>
                     <span class="cus-xx-large">And now… </span> there's an astonishing flood of business, self- <br> help, and how-to books, all hawking the same advice… </p>
 
 
-            </center>
+            </center> -->
+            <section class="wrap whitehead2-container">
+                <div class="section color-light">
+                    <center>
+                        <h1 class="whitehead2" style="font-size: 30px; white-space: nowrap; font-family: 'Special Elite', cursive;">
+                            And now… <br></span> there's an astonishing flood of business, <br> self - help, and how-to books, <br> all hawking the same advice…
+                        </h1>
+                    </center>
+                </div>
+            </section>
             <div class="allaudience">
-                <img src="images/tinified/layer_9.png" alt="" class="aud_layer_1 img-responsive img-fluid">
-                <img src="images/tinified/layer_8.png" alt="" class="aud_layer_2 img-responsive img-fluid">
-                <img src="images/tinified/layer_7.png" alt="" class="aud_layer_3 img-responsive img-fluid">
-                <img src="images/tinified/layer_6.png" alt="" class="aud_layer_4 img-responsive img-fluid">
-                <img src="images/tinified/layer_5.png" alt="" class="aud_layer_5 img-responsive img-fluid">
-                <img src="images/tinified/layer_4.png" alt="" class="aud_layer_6 img-responsive img-fluid">
-                <img src="images/tinified/layer_3.png" alt="" class="aud_layer_7 img-responsive img-fluid">
-                <img src="images/tinified/layer_2.png" alt="" class="aud_layer_8 img-responsive img-fluid">
-                <img src="images/tinified/man_closest_layer.png" alt="" style=" position: inherit; top: 30rem; left: 0;" class="aud_layer_9 img-responsive img-fluid">
-                <p data-aos="fade-left" style=" position: absolute; left: 20%; bottom: 0; color: white;">So you can lead a more color and extraordinary life</p>
+                <img src="images/tinified/layer_9.webp" alt="" loading="lazy" class="aud_layer_1 img-responsive img-fluid">
+                <img src="images/tinified/layer_8.webp" alt="" loading="lazy" class="aud_layer_2 img-responsive img-fluid">
+                <img src="images/tinified/layer_7.webp" alt="" loading="lazy" class="aud_layer_3 img-responsive img-fluid">
+                <img src="images/tinified/layer_6.webp" alt="" loading="lazy" class="aud_layer_4 img-responsive img-fluid">
+                <img src="images/tinified/layer_5.webp" alt="" loading="lazy" class="aud_layer_5 img-responsive img-fluid">
+                <img src="images/tinified/layer_4.webp" alt="" loading="lazy" class="aud_layer_6 img-responsive img-fluid">
+                <img src="images/tinified/layer_3.webp" alt="" loading="lazy" class="aud_layer_7 img-responsive img-fluid">
+                <img src="images/tinified/layer_2.webp" alt="" loading="lazy" class="aud_layer_8 img-responsive img-fluid">
+                <img src="images/tinified/man_closest_layer.webp" alt="" loading="lazy" style=" position: inherit; top: 30rem; left: 0;" class="aud_layer_9 img-responsive img-fluid">
             </div>
+
             <!-- <img src="images/nine.png" alt="" class="img-responsive img-fluid"> -->
+        </div>
+        <div class="below-audiance-footer">
+            <p>So you can lead a more color and extraordinary life</p>
         </div>
         <!-- <div class="shipimg-container">
             <center>
@@ -327,50 +348,78 @@
             </div>
         </div> -->
         <div class="meeting-container">
-            <center>
-                <p style="margin-top: 10rem;"> <span class="cus-xx-large"> But what if...</span> </p>
+            <center style="padding-top: 100px;">
+                <p> <span class="cus-xx-large"> But what if...</span> </p>
             </center>
-            <div class="row px-5 flex-row-reverse baba">
-                <div data-aos="fade-left" data-aos-duration="200" class="col-md-6  mt-5">
-                    <img src="images/twelle.png" alt="" class="img-responsive img-fluid">
-                    <!-- <div>
-                        <img src="images/sun_layers/1_background_blue_2c8fb8.jpg" alt="">
-                        <img src="images/sun_layers/2_cloud_1.png" alt="">
-                        <img src="images/sun_layers/3_cloud_2.png" alt="">
-                        <img src="images/sun_layers/4_ground.png" alt="">
-                        <img src="images/sun_layers/5_orange_glow.png" alt="">
-                        <img src="images/sun_layers/6_people.png" alt="">
-                        <img src="images/sun_layers/7_sun_back.png" alt="">
-                        <img src="images/sun_layers/8_sun_front.png" alt="">
-                    </div> -->
-                </div>
-                <div data-aos="fade-right" data-aos-duration="200" class="col-md-6 px-md-5 px-lg-5">
-                    <div style=" width: 100%; height: 100%; display: flex; align-items: center; text-align: end; padding: 0;">
-                        <p>…there were an online community of believers, who are sick of feeling like they're swimming upstream.</p>
+            <div class="row flex-row-reverse baba">
+                <div class="col-md-12 px-md-5 px-lg-5">
+                    <div style=" width: 100%; height: 100%; text-align: center; padding: 0;">
+                        <p>…there were an online community of believers, <br><br> who are sick of feeling like they're swimming upstream.</p>
                     </div>
                 </div>
+                <div data-aos="fade-left" data-aos-duration="200" class="col-md-12 sun_layer-container  mt-5">
+                    <!-- <img src="images/twelle.png" alt="" loading="lazy" class="img-responsive img-fluid"> -->
+                    <div class="sun_layer-inner">
+                        <img src="images/sun_layers/1_background_blue_2c8fb8.webp" alt="" class="sun_layer_1 img-responsive img-fluid">
+                        <img src="images/sun_layers/2_cloud_1.webp" alt="" class="sun_layer_2 img-responsive img-fluid">
+                        <img src="images/sun_layers/3_cloud_2.webp" alt="" class="sun_layer_3 img-responsive img-fluid">
+                        <img src="images/sun_layers/4_ground.webp" alt="" class="sun_layer_4 img-responsive img-fluid">
+                        <img src="images/sun_layers/5_orange_glow.webp" alt="" class="sun_layer_5 img-responsive img-fluid">
+                        <img src="images/sun_layers/6_people.webp" alt="" class="sun_layer_6 img-responsive img-fluid">
+                        <img src="images/sun_layers/7_sun_back.webp" alt="" class="sun_layer_7 img-responsive img-fluid">
+                        <img src="images/sun_layers/8_sun_front.png" alt="" class="sun_layer_8 img-responsive img-fluid">
+                    </div>
+                </div>
+
             </div>
 
         </div>
-        <!-- <div class="meeting-container">
-            <center>
-                <p>it gets worse: <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed magnam at esse a saepe corporis voluptatum laboriosam commodi quae quam itaque minus molestias, ullam voluptates officiis consequatur labore</p>
-            </center>
-            <img src="images/eleven.png" alt="" class="img-responsive img-fluid">
-        </div> -->
 
-        <div class="container-fluid child-section responsive-mb responsive-mt">
+        <div class="child-section responsive-mb ">
+            <div class="below-meeting-container">
+
+            </div>
+            <center>
+                <h1 class="responsive-mb-persantage">Your journey to excellence needs company…</h1>
+                <p>with equal parts honesty, impact,</p>
+                <p>...And insolence</p>
+            </center>
+            <img src="images/child.png" alt="" loading="lazy" class="image-fluid " />
+        </div>
+
+        <!-- <div class="container-fluid child-section responsive-mb responsive-mt">
             <div class="row px-5 ">
+                <center>
+                    <h1 class="responsive-mb-persantage">Your journey to excellence needs company…</h1>
+                </center>
+
                 <div data-aos="fade-left" class="col-md-6 ">
-                    <img src="images/child.png" alt="" class="image-fluid " />
+                    <img src="images/child.png" alt="" loading="lazy" class="image-fluid " />
                 </div>
                 <div data-aos="fade-right" class="col-md-6 px-md-5 px-lg-5">
-                    <h1>Your journey to excellence needs company…</h1>
+
                     <p>with equal parts honesty, impact,</p>
                     <p>...And insolence</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <!-- <div class="container-fluid child-section responsive-mb responsive-mt">
+            <div class="row px-5 ">
+                <center>
+                    <h1 class="responsive-mb-persantage">Your journey to excellence needs company…</h1>
+                </center>
+
+                <div data-aos="fade-left" class="col-md-6 ">
+                    <img src="images/child.png" alt="" loading="lazy" class="image-fluid " />
+                </div>
+                <div data-aos="fade-right" class="col-md-6 px-md-5 px-lg-5">
+
+                    <p>with equal parts honesty, impact,</p>
+                    <p>...And insolence</p>
+                </div>
+            </div>
+        </div> -->
 
         <!-- 
         <div class="yourJourney-container" style=" text-align: center;">
@@ -384,22 +433,80 @@
             </div>
         </div> -->
 
-        <div class="slider-container">
-            <div style=" padding: 0% 5% 5%;">
+        <div class="slider-container responsive-mb">
+            <div style=" padding: 0% 5%" class="responsive-mb">
                 <h1>Each journey needs a guide</h1>
-                <p>…so we've gathered true experts at confronting mediocrity, who have personally overcome it, and are passionate about guiding you through your own journey.</p>
+                <p>…so we've gathered true experts at confronting mediocrity,<br> who have personally overcome it, <br> and are passionate about guiding you through your own journey.</p>
             </div>
-            <!-- <div class="row owl-carousel owl-theme">
-                <div class="item">
-                    <img src="images/person.png" alt="" class="img-fluid mb-5">
-
-                    <center>
-                        <h3>Mark Boundy</h3>
-                        <p>A good man job title</p>
-                    </center>
-
+            <div class="container">
+                <div class="row person-section">
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-1">
+                        <img src="images/slider/person1.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Itay verchik</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-2">
+                        <img src="images/slider/person2.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Amy Hirschi</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-3">
+                        <img src="images/slider/person3.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Jurica Koletić</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-4">
+                        <img src="images/slider/person4.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Harps Joseph</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-5">
+                        <img src="images/slider/person.png" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Itay verchik</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-6">
+                        <img src="images/slider/person4.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Amy Hirschi</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-7">
+                        <img src="images/slider/person2.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Jurica Koletić</h3>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 col-lg-3 py-0 px-5 border-0 card-8">
+                        <img src="images/slider/person1.jpg" loading="lazy" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                            <center>
+                                <h3>Harps Joseph</h3>
+                            </center>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
+
         </div>
 
         <!-- <div class="container-fluid mt-5 responsive-mb">
@@ -437,13 +544,13 @@
             </div>
         </div> -->
 
-        <div class="container-fluid mt-5 responsive-mb">
-            <div class="row px-5 flex-row-reverse baba">
-                <h1 class="text-center">
+        <div class="container-fluid responsive-mb">
+            <div class="row px-5 flex-row-reverse baba secondlast-section">
+                <h1 class="text-center responsive-mb">
                     ..and your journey needs tools, tips, and fellow travelers,
                 </h1>
                 <div data-aos="fade-left" data-aos-duration="200" class="col-md-6  mt-5">
-                    <img src="images/multipleface.png" alt="" class="image-fluid book-cover" />
+                    <img src="images/multipleface.png" loading="lazy" alt="" class="image-fluid book-cover" />
                 </div>
                 <div data-aos="fade-right" data-aos-duration="200" class="col-md-6 px-md-5 px-lg-5">
                     <div class="ml-0 ml-lg-5">
@@ -481,12 +588,12 @@
             </div>
         </div> -->
         <div class="container-fluid mt-5 responsive-mb">
-            <div class="row px-5 baba">
-                <div class="text-center">
+            <div class="row px-5 baba ">
+                <div class="text-center responsive-mb">
                     <h1>Want to join the fun?</h1>
-                    <p class="text-center book-content fs-3 my-5">Great! Get full access to every article, event, discussion,and interact with our experts<br> ...or be a silent, anonymous observer.</p>
+                    <p class="text-center book-content fs-3 my-5 ">Great! Get full access to every article, event, discussion,and interact with our experts<br> ...or be a silent, anonymous observer.</p>
                 </div>
-                <div class="col plan-bg my-5" data-aos="zoom-out-up">
+                <div class="col my-5" data-aos="zoom-out-up">
                     <h2 class="join_us"><span>Join Us</span></h2>
                     <div>
                         <div class="columns">
@@ -550,16 +657,24 @@
         <!-- <h2>bajsjsjjs</h2> -->
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
     <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="OwlCarousel/dist/owl.carousel.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!-- <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+
+
+    <!-- <script src="OwlCarousel/dist/owl.carousel.min.js"></script> -->
+    <!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
     <script src="assets/custom.js"></script>
+
 </body>
 
 </html>

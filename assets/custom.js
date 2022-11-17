@@ -1,9 +1,12 @@
 if (
-    (AOS.init(),
+    (
+        // AOS.init(),
         gsap.registerPlugin(ScrollTrigger),
         gsap.to(".blackhead", { scale: 0.2, duration: 1, scrollTrigger: { trigger: ".blackhead", scrub: !0, start: "top bottom" } }),
         gsap.to(".whitehead", { scale: 2.5, duration: 1, scrollTrigger: { trigger: ".whitehead", scrub: !0, start: "top 75%", end: '250% top' } }),
-        gsap.to(".main-cloud", { scale: 2, transformOrigin: "bottom", duration: 1, scrollTrigger: { trigger: ".main-cloud", scrub: !0, start: "100% top", end: '250% ' } }),
+        gsap.to(".whitehead2", { scale: 1, y: "400%", duration: 1, scrollTrigger: { trigger: ".whitehead2", scrub: !0, start: "top 50%", end: '800% top' } }),
+        gsap.to(".whitehead3", { scale: 2.5, duration: 1, scrollTrigger: { trigger: ".whitehead3", scrub: !0, start: "center center", end: '700% top' } }),
+        // gsap.to(".main-cloud", { scale: 2, transformOrigin: "bottom", duration: 1, scrollTrigger: { trigger: ".main-cloud", scrub: !0, start: "100% top", end: '250% ' } }),
         window.innerWidth < 600)
 ) {
     gsap
@@ -64,6 +67,32 @@ if (
     gsap
         .timeline({ scrollTrigger: { trigger: ".desert-section .centered", start: "500% 20%", end: '1100%', scrub: !0, toggleActions: "restart pause reverse pause" } })
         .to(".desert-section .centered", { opacity: 5, scale: 1.1, x: -300, duration: 2.5, ease: "back.out(2)" });
+
+
+    // sun layer tablet
+
+    gsap
+        .timeline({
+            scrollTrigger: {
+                trigger: ".sun_layer-container",
+                // markers: true,
+                start: "-50% bottom",
+                // end: "bottom bottom",
+                scrub: !0,
+                toggleActions: "restart none reverse none"
+            }
+        })
+
+    .to(".sun_layer_1", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_2", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_3", 1, { y: "-40%" }, '-=0.9')
+        .to(".sun_layer_4", 1, { y: "-20%" }, '-=0.9')
+        .to(".sun_layer_5", 1, { y: "-10rem" }, '-=1')
+        .to(".sun_layer_6", 1, { y: "-20%" }, '-=0.9')
+        .to(".sun_layer_7", 1, { y: "-60%" }, '-=0.9')
+        .to(".sun_layer_8", 1, { y: "-60%" }, '-=0.9')
+
+
 } else if (window.innerWidth < 900 && window.innerWidth > 600) {
 
     gsap
@@ -125,23 +154,48 @@ if (
         .timeline({ scrollTrigger: { trigger: ".desert-section .centered", start: "350% top", end: '1400%', scrub: !0, toggleActions: "restart pause reverse pause" } })
         .to(".desert-section .centered", { opacity: 5, scale: 1.1, x: -300, duration: 2.5, ease: "back.out(2)" });
 
+
+    // sun layer tablet
+
+    gsap
+        .timeline({
+            scrollTrigger: {
+                trigger: ".sun_layer-container",
+                // markers: true,
+                start: "-30% bottom",
+                // end: "bottom bottom",
+                scrub: !0,
+                toggleActions: "restart none reverse none"
+            }
+        })
+
+    .to(".sun_layer_1", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_2", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_3", 1, { y: "-40%" }, '-=0.9')
+        .to(".sun_layer_4", 1, { y: "-20%" }, '-=0.9')
+        .to(".sun_layer_5", 1, { y: "-20rem" }, '-=1')
+        .to(".sun_layer_6", 1, { y: "-30%" }, '-=0.9')
+        .to(".sun_layer_7", 1, { y: "-100%" }, '-=0.9')
+        .to(".sun_layer_8", 1, { y: "-100%" }, '-=0.9')
+
 } else {
 
     gsap
         .timeline({
             scrollTrigger: {
-                trigger: ".desert-section",
+                trigger: "#desert-section",
                 // markers: true,
-                start: "15% 50%",
+                start: "-70% 50%",
+                // start: "15% 50%",
                 scrub: !0,
                 toggleActions: "restart pause reverse pause"
             }
         })
-        .from(".desert-section", {
+        .from("#desert-section", {
             scale: 4.5,
             ease: "none"
         })
-        .to(".desert-section", {
+        .to("#desert-section", {
             scale: 1,
             ease: "none"
         })
@@ -181,8 +235,45 @@ if (
         .to(".desert-section .top-left", { opacity: 1, scale: 2, x: '50%', duration: 5, y: -200 })
         .to(".hide-text", { opacity: 0 }, '-=5');
     gsap
-        .timeline({ scrollTrigger: { trigger: ".desert-section .centered", start: "100% 35%", end: '1700%', scrub: !0, toggleActions: "restart pause reverse pause" } })
-        .to(".desert-section .centered", { opacity: 5, scale: 1.1, x: -300, duration: 2.5, ease: "back.out(2)" });
+        .timeline({
+            scrollTrigger: {
+                trigger: ".desert-section .centered",
+                start: "100% 35%",
+                end: '1700%',
+                scrub: !0,
+                toggleActions: "restart pause reverse pause"
+            }
+        })
+        .to(".desert-section .centered", {
+            opacity: 5,
+            scale: 1.1,
+            x: "-60vw",
+            duration: 2.5,
+            ease: "back.out(2)"
+        });
+
+    // sun layer laptop
+
+    gsap
+        .timeline({
+            scrollTrigger: {
+                trigger: ".sun_layer-container",
+                // markers: true,
+                start: "-30% bottom",
+                end: "200% top",
+                scrub: !0,
+                toggleActions: "restart none reverse none"
+            }
+        })
+
+    .to(".sun_layer_1", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_2", 1, { y: "-10%" }, '-=0.9')
+        .to(".sun_layer_3", 1, { y: "-40%" }, '-=0.9')
+        .to(".sun_layer_4", 1, { y: "-20%" }, '-=0.9')
+        .to(".sun_layer_5", 1, { y: "-40rem" }, '-=1')
+        .to(".sun_layer_6", 1, { y: "-30%" }, '-=0.9')
+        .to(".sun_layer_7", 1, { y: "-100%" }, '-=0.9')
+        .to(".sun_layer_8", 1, { y: "-100%" }, '-=0.9')
 
 }
 window.innerWidth > 900 &&
@@ -194,8 +285,8 @@ window.innerWidth > 900 &&
         gsap
         .timeline({ scrollTrigger: { trigger: ".blackman-stone1", start: "57% 30%", end: "200% top", scrub: !0, toggleActions: "restart pause reverse pause" } })
         .to(".blackman-stone1", { xPercent: -150, yPercent: 250, scale: 0.2, opacity: 1, ease: "power1.out", duration: 2 })
-        .to(".blackman-stone1", { xPercent: -150, yPercent: 250, scale: 0.2, opacity: 0, ease: "power1.out", duration: 2 })),
-    gsap.to(".main-img", { scrollTrigger: { trigger: ".main-img", start: "0px 500px", scrub: !0, toggleActions: "restart pause reverse pause" }, y: -200, duration: 2 });
+        .to(".blackman-stone1", { xPercent: -150, yPercent: 250, scale: 0.2, opacity: 0, ease: "power1.out", duration: 2 }));
+
 var animation,
     tl = new TimelineMax({ repeat: -1, repeatDelay: 0.5, ease: "power3.out" });
 (
@@ -208,17 +299,17 @@ var animation,
 (
     gsap);
 
-$(".owl-carousel").owlCarousel({ loop: !0, margin: 40, dots: !1, responsive: { 0: { items: 1 }, 600: { items: 3 }, 1000: { items: 5 } } }),
-    gsap.utils.toArray(".section").forEach((t, o) => {
-        if (null !== t.getAttribute("data-color")) {
-            var a = t.getAttribute("data-color");
-            gsap.to(".wrap", { backgroundColor: "dark" === a ? gsap.getProperty("html", "--dark") : gsap.getProperty("html", "--light"), immediateRender: !1, scrollTrigger: { trigger: t, scrub: !0, start: "top bottom", end: "+=100%" } });
-        }
-    });
+//$(".owl-carousel").owlCarousel({ loop: !0, margin: 40, dots: !1, responsive: { 0: { items: 1 }, 600: { items: 3 }, 1000: { items: 4 } } }),
+gsap.utils.toArray(".section").forEach((t, o) => {
+    if (null !== t.getAttribute("data-color")) {
+        var a = t.getAttribute("data-color");
+        gsap.to(".wrap", { backgroundColor: "dark" === a ? gsap.getProperty("html", "--dark") : gsap.getProperty("html", "--light"), immediateRender: !1, scrollTrigger: { trigger: t, scrub: !0, start: "top bottom", end: "+=100%" } });
+    }
+});
 
 ScrollTrigger.matchMedia({
     "(min-width:1000px)": function() {
-
+        // laptoppp
         gsap
             .timeline({
                 scrollTrigger: {
@@ -304,93 +395,146 @@ ScrollTrigger.matchMedia({
                 },
             })
             .addLabel("start")
-            .to(".statue1", { opacity: 1, y: '-10%', ease: "power1.out" })
+            .to(".statue1", { opacity: 1, y: '-10%', ease: "Bounce.easeOut" })
             .addLabel("show-bg-video")
             .to(".statue3", { opacity: 0.6, ease: "power1.out" })
             .to(".statue2", { opacity: 0.6, y: '-5%', x: '-10%', ease: "power1.out" })
+            .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
 
-        gsap
-            .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
-            .from(".uppertext", { x: "-45%", duration: 2.5, ease: "back.out(2)" });
+        // gsap
+        //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
+        //     .from(".uppertext", { x: "-45%", duration: 2.5, ease: "back.out(2)" });
+
+
 
 
         // clouds laptop
 
-        gsap.to('.cloud-1', {
+        // gsap.to('.cloud-1', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-1",
+        //         start: '-100% bottom',
+        //         markers: true,
+        //         toggleActions: "restart complete none reset" //
+        //     },
+        //     x: '-110vw',
+        //     duration: 30,
+        // });
+
+        // gsap.to(".cloud-2", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-2",
+        //         start: '-200% bottom',
+        //         markers: true,
+        //         toggleActions: "restart complete none reset" //
+        //     },
+        //     x: '120vw',
+        //     duration: 30,
+        // });
+
+        // gsap.to(".cloud-3", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-3",
+        //         start: '-300% bottom',
+        //         markers: true,
+        //         toggleActions: "restart complete none reset" //
+        //     },
+        //     x: '-110vw',
+        //     duration: 30,
+        // });
+
+        // gsap.to('.cloud-4', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-4",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -600,
+        //     y: 200,
+        //     duration: 2,
+        // });
+
+        // gsap.to(".cloud-5", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-5",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: 600,
+        //     duration: 2,
+        // });
+
+        // gsap.to(".cloud-6", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-6",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -300,
+        //     y: 200,
+        //     duration: 2,
+        // });
+
+
+        gsap.to("#floater", {
             scrollTrigger: {
-                trigger: ".cloud-1",
-                start: 'bottom bottom',
+                trigger: "#floater",
+                start: "top 25%",
                 // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
+                scrub: !0,
+                toggleActions: "restart pause reverse pause",
             },
-            x: -600,
-            y: 50,
-            duration: 2,
+            duration: 10,
+            y: 150,
         });
 
-        gsap.to(".cloud-2", {
+        gsap.to(".left-text-2", {
             scrollTrigger: {
-                trigger: ".cloud-2",
-                start: 'bottom bottom',
+                trigger: ".left-text-2",
+                start: "top bottom",
                 // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
+                scrub: !0,
+                toggleActions: "restart pause reverse pause",
             },
-            x: 600,
-            y: -100,
-            duration: 2,
+            duration: 10,
+            y: 150,
         });
 
-        gsap.to(".cloud-3", {
-            scrollTrigger: {
-                trigger: ".cloud-3",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -800,
-            duration: 2,
-        });
 
-        gsap.to('.cloud-4', {
-            scrollTrigger: {
-                trigger: ".cloud-4",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -600,
-            y: 200,
-            duration: 2,
-        });
 
-        gsap.to(".cloud-5", {
-            scrollTrigger: {
-                trigger: ".cloud-5",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: 600,
-            duration: 2,
-        });
+        // gsap.to(".desert-section .centered", {
+        //     scrollTrigger: {
+        //         trigger: ".desert-section .centered",
+        //         start: "100% 35%",
+        //         end: '1700%',
+        //         markers: true,
+        //         scrub: !0,
+        //         toggleActions: "restart pause reverse pause",
+        //     },
+        //     duration: 10,
+        //     y: 150,
+        // });
 
-        gsap.to(".cloud-6", {
-            scrollTrigger: {
-                trigger: ".cloud-6",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -300,
-            y: 200,
-            duration: 2,
-        });
+        // gsap
+        //     .timeline({
+        //         scrollTrigger: {
+        //             trigger: ".left-text-sky-section",
+        //             start: "-50% center",
+        //             end: "-50% center",
+        //             markers: true,
+        //             // yoyo: true,
+        //             toggleActions: "restart none none none",
+
+        //         },
+        //     })
+
+        // .to(".left-text-sky-section", { opacity: 1, x: '53vw', })
 
 
 
@@ -434,92 +578,92 @@ ScrollTrigger.matchMedia({
                 },
             })
             .addLabel("start")
-            .to(".statue1", { opacity: 1, y: '-10%', ease: "power1.out" })
+            .to(".statue1", { opacity: 1, y: '-10%', ease: "Bounce.easeOut" })
             .addLabel("show-bg-video")
             .to(".statue3", { opacity: 0.6, ease: "power1.out" })
             .to(".statue2", { opacity: 0.6, y: '-5%', x: '-10%', ease: "power1.out" })
-
-        gsap
-            .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
-            .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
+            .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
+            // gsap
+            //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
+            //     .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
 
         // clouds  tab
 
-        gsap.to('.cloud-1', {
-            scrollTrigger: {
-                trigger: ".cloud-1",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -600,
-            y: 50,
-            duration: 2,
-        });
+        // gsap.to('.cloud-1', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-1",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -600,
+        //     y: 50,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-2", {
-            scrollTrigger: {
-                trigger: ".cloud-2",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: 600,
-            y: -100,
-            duration: 2,
-        });
+        // gsap.to(".cloud-2", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-2",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: 600,
+        //     y: -100,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-3", {
-            scrollTrigger: {
-                trigger: ".cloud-3",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -800,
-            duration: 2,
-        });
+        // gsap.to(".cloud-3", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-3",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -800,
+        //     duration: 2,
+        // });
 
-        gsap.to('.cloud-4', {
-            scrollTrigger: {
-                trigger: ".cloud-4",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -600,
-            y: 200,
-            duration: 2,
-        });
+        // gsap.to('.cloud-4', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-4",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -600,
+        //     y: 200,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-5", {
-            scrollTrigger: {
-                trigger: ".cloud-5",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: 600,
-            duration: 2,
-        });
+        // gsap.to(".cloud-5", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-5",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: 600,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-6", {
-            scrollTrigger: {
-                trigger: ".cloud-6",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -300,
-            y: 200,
-            duration: 2,
-        });
+        // gsap.to(".cloud-6", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-6",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -300,
+        //     y: 200,
+        //     duration: 2,
+        // });
 
 
 
@@ -527,9 +671,9 @@ ScrollTrigger.matchMedia({
 
     "(max-width: 599px)": function() {
 
-        gsap
-            .timeline({ scrollTrigger: { trigger: ".uppertext", start: "20% 90%", scrub: !0, toggleActions: "restart pause reverse pause" } })
-            .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
+        // gsap
+        //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "20% 90%", scrub: !0, toggleActions: "restart pause reverse pause" } })
+        //     .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
 
         gsap
             .timeline({
@@ -562,89 +706,89 @@ ScrollTrigger.matchMedia({
                 },
             })
             .addLabel("start")
-            .to(".statue1", { opacity: 1, y: '-10%', ease: "power1.out" })
+            .to(".statue1", { opacity: 1, y: '-10%', ease: "Bounce.easeOut" })
             .addLabel("show-bg-video")
             .to(".statue3", { opacity: 0.6, ease: "power1.out" })
             .to(".statue2", { opacity: 0.6, y: '-5%', x: '-10%', ease: "power1.out" })
-
+            .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
 
         // clouds mobile
 
-        gsap.to('.cloud-1', {
-            scrollTrigger: {
-                trigger: ".cloud-1",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -600,
-            y: 50,
-            duration: 2,
-        });
+        // gsap.to('.cloud-1', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-1",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -600,
+        //     y: 50,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-2", {
-            scrollTrigger: {
-                trigger: ".cloud-2",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: 600,
-            y: -100,
-            duration: 2,
-        });
+        // gsap.to(".cloud-2", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-2",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: 600,
+        //     y: -100,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-3", {
-            scrollTrigger: {
-                trigger: ".cloud-3",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -800,
-            duration: 2,
-        });
+        // gsap.to(".cloud-3", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-3",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -800,
+        //     duration: 2,
+        // });
 
-        gsap.to('.cloud-4', {
-            scrollTrigger: {
-                trigger: ".cloud-4",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -600,
-            y: 200,
-            duration: 2,
-        });
+        // gsap.to('.cloud-4', {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-4",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -600,
+        //     y: 200,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-5", {
-            scrollTrigger: {
-                trigger: ".cloud-5",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: 600,
-            duration: 2,
-        });
+        // gsap.to(".cloud-5", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-5",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: 600,
+        //     duration: 2,
+        // });
 
-        gsap.to(".cloud-6", {
-            scrollTrigger: {
-                trigger: ".cloud-6",
-                start: 'bottom bottom',
-                // markers: true,
-                scrub: true,
-                toggleActions: "restart pause reverse pause" //
-            },
-            x: -300,
-            y: 200,
-            duration: 2,
-        });
+        // gsap.to(".cloud-6", {
+        //     scrollTrigger: {
+        //         trigger: ".cloud-6",
+        //         start: 'bottom bottom',
+        //         // markers: true,
+        //         scrub: true,
+        //         toggleActions: "restart pause reverse pause" //
+        //     },
+        //     x: -300,
+        //     y: 200,
+        //     duration: 2,
+        // });
 
     }
 
@@ -664,8 +808,8 @@ if (window.innerHeight > 0) {
 
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    // console.log(scroll);
-    if (scroll > 250) {
+    // console.log("scroll screen " + scroll);
+    if (scroll > 820) {
         $('#scrolldown').css('opacity', '0');
     } else {
         $('#scrolldown').css('opacity', '1');
@@ -676,20 +820,20 @@ $(window).scroll(function() {
 
 
 
-gsap
-    .timeline({
-        scrollTrigger: {
-            trigger: ".victorian",
-            // markers: true,
-            start: "-100% center",
-            scrub: !0,
-            toggleActions: "restart pause reverse pause"
-        }
-    })
-    .to(".b3", {
-        y: '-80%',
-        ease: "none"
-    })
+// gsap
+//     .timeline({
+//         scrollTrigger: {
+//             trigger: ".victorian",
+//             // markers: true,
+//             start: "-100% center",
+//             scrub: !0,
+//             toggleActions: "restart pause reverse pause"
+//         }
+//     })
+//     .to(".b3", {
+//         y: '-80%',
+//         ease: "none"
+//     })
 
 $(window).on('load', function() {
     setTimeout(function() { // allowing 3 secs to fade out loader
@@ -748,28 +892,217 @@ gsap
     })
     .to(".water-section img", 1, { y: "-25%" })
 
-gsap
-    .timeline({
-        scrollTrigger: {
-            trigger: ".b7",
-            start: "top 99%",
-            end: "bottom top",
-            scrub: !0,
-            // markers: true,
-            toggleActions: "restart none reverse none"
-        }
-    })
-    .to(".b7", 1, { x: "45%" })
+// gsap
+//     .timeline({
+//         scrollTrigger: {
+//             trigger: ".b7",
+//             start: "top 99%",
+//             end: "bottom top",
+//             scrub: !0,
+//             // markers: true,
+//             toggleActions: "restart none reverse none"
+//         }
+//     })
+//     .to(".b7", 1, { x: "45%" })
+
+// gsap
+//     .timeline({
+//         scrollTrigger: {
+//             trigger: ".b8",
+//             start: "top 99%",
+//             end: "bottom top",
+//             scrub: !0,
+//             // markers: true,
+//             toggleActions: "restart none reverse none"
+//         }
+//     })
+//     .to(".b8", 1, { x: "45%" })
+
+
+// window.onscroll = function() { scrollFunction() };
+
+// function scrollFunction() {
+//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//         document.getElementById("header-logo").style.width = "70%";
+//     } else {
+//         document.getElementById("header-logo").style.width = "100%";
+//     }
+// }
+
+
+
+
+gsap.to(".b7", {
+    scrollTrigger: {
+        trigger: ".b7",
+        start: "-200% 99%",
+        // markers: true,
+        toggleActions: "restart none none none",
+    },
+    duration: 20,
+    x: '40vw'
+});
+
+
+gsap.to(".b8", {
+    scrollTrigger: {
+        trigger: ".b8",
+        start: "-220% 99%",
+        // markers: true,
+        toggleActions: "restart none none none",
+    },
+    duration: 30,
+    x: '20vw'
+});
+
+gsap.to(".b4", {
+    scrollTrigger: {
+        trigger: ".b4",
+        start: "-10% 99%",
+        // markers: true,
+        toggleActions: "restart none none none",
+    },
+    scale: 1,
+    duration: 8,
+    x: '150vw',
+    y: '200%',
+    scale: 2
+});
+
+
+
+
+$(document).on("scroll", function() {
+    if ($(document).scrollTop() > 100) {
+        $("#header-logo").addClass("shrink");
+        $('.sb-example-1 a').css('font-size', '17px');
+    } else {
+        $("#header-logo").removeClass("shrink");
+        $('.sb-example-1 a').css('font-size', '20px');
+    }
+
+    var innrheight = $(document).innerHeight();
+    var cal_innrheight = innrheight / 1.2;
+    console.log("documents " + innrheight);
+    console.log("document heigts " + cal_innrheight);
+
+    if ($(document).scrollTop() > cal_innrheight) {
+        $('#universal-arrow').addClass('cus_none_log');
+    } else {
+        $('#universal-arrow').removeClass('cus_none_log');
+    }
+
+});
+
+gsap.to(".below-audiance-footer p", {
+    scrollTrigger: {
+        trigger: ".below-audiance-footer p",
+        start: "top 90%",
+        // markers: true,
+        scrub: !0,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 10,
+    y: 100,
+});
+
+gsap.to(".meeting-container p", {
+    scrollTrigger: {
+        trigger: ".meeting-container p",
+        start: "top 95%",
+        // markers: true,
+        scrub: !0,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 5,
+    y: 100,
+});
+
+gsap.to(".child-section h1, .child-section p", {
+    scrollTrigger: {
+        trigger: ".child-section h1, .child-section p",
+        start: "top 95%",
+        // markers: true,
+        scrub: !0,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 5,
+    y: 100,
+});
+
+gsap.to(".left-text-sky-section", {
+    scrollTrigger: {
+        trigger: ".left-text-sky-section",
+        start: "top bottom",
+        end: "200% top",
+        // markers: true,
+        scrub: !0,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 5,
+    y: "130%",
+});
+
+gsap.to(".uppertext", {
+    scrollTrigger: {
+        trigger: ".uppertext",
+        start: "top bottom",
+        end: "200% top",
+        // markers: true,
+        scrub: !0,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 5,
+    y: "130%",
+});
+
+
+// person-section
+
 
 gsap
     .timeline({
         scrollTrigger: {
-            trigger: ".b8",
-            start: "top 99%",
-            end: "bottom top",
-            scrub: !0,
+            trigger: ".person-section",
             // markers: true,
+            start: "-10% 95%",
+            end: "100% 95%",
+            scrub: !0,
             toggleActions: "restart none reverse none"
         }
     })
-    .to(".b8", 1, { x: "45%" })
+
+.to('.card-1', 1, { y: "-20%" }, '-=0.9')
+    .to(".card-2", 1, { y: "-40%" }, '-=0.9')
+    .to('.card-3', 1, { y: "-20%" }, '-=0.9')
+    .to(".card-4", 1, { y: "-30%" }, '-=0.9')
+    .to('.card-5', 1, { y: "-60%" }, '-=0.9')
+    .to(".card-6", 1, { y: "-60%" }, '-=0.20')
+    .to('.card-7', 1, { y: "-50%" }, '-=0.9')
+    .to(".card-8", 1, { y: "-50%" }, '-=0.20')
+    // .to('.card-1', 1, { y: "40%" }, '-=0.9')
+    // .to(".card-2", 1, { y: "-40%" }, '-=0.9')
+    // .to('.card-3', 1, { y: "40%" }, '-=0.9')
+    // .to(".card-4", 1, { y: "-40%" }, '-=0.9')
+    // .to('.card-5', 1, { y: "30%" }, '-=0.9')
+    // .to(".card-6", 1, { y: "-60%" }, '-=0.9')
+    // .to('.card-7', 1, { y: "30%" }, '-=0.9')
+    // .to(".card-8", 1, { y: "-60%" }, '-=0.9')
+
+
+
+
+var scrollTimer = -1;
+
+function bodyScroll() {
+    $('#universal-arrow').hide();
+
+    if (scrollTimer != -1)
+        clearTimeout(scrollTimer);
+
+    scrollTimer = window.setTimeout("scrollFinished()", 2000);
+}
+
+function scrollFinished() {
+    $('#universal-arrow').show();
+}
