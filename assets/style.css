@@ -13,8 +13,27 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    /* transition: all 0.02s ease-in-out;
+    -webkit-transition: all 0.02s ease-in-out;
+    -moz-transition: all 0.02s ease-in-out; */
 }
+
+.whitehead3,
+.whitehead2,
+.desert-section .top-left {
+    transition: all 0.05s ease-in-out;
+    -webkit-transition: all 0.05s ease-in-out;
+    -moz-transition: all 0.05s ease-in-out;
+}
+
+
+/* .sun_layer-inner img,
+.allaudience img {
+    transition: all 0.03s ease-in-out;
+    -webkit-transition: all 0.03s ease-in-out;
+    -moz-transition: all 0.03s ease-in-out;
+} */
 
 html {
     font-size: 10px;
@@ -102,6 +121,13 @@ header {
 
 .section {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.section-lite {
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center
@@ -317,6 +343,10 @@ nav ul li a:hover::after {
     transform: scaleX(1)
 }
 
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
 @keyframes slideIn {
     to {
         transform: translateX(0)
@@ -393,7 +423,11 @@ nav ul li a:hover::after {
 }
 
 .left-section {
-    padding: 5rem 2rem 0rem 6rem
+    padding: 5rem 2rem 0rem 6rem;
+    width: 100%;
+    max-width: 60vw;
+    margin-left: 0;
+    /* background: aquamarine; */
 }
 
 .left-section h1 {
@@ -417,6 +451,20 @@ nav ul li a:hover::after {
     padding: .5rem 2rem;
     color: white;
     border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+    .left-section {
+        padding: 5rem 2rem 0rem 6rem;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        /* background: aquamarine; */
+    }
+    .left-section a {
+        font-size: 13px;
+        padding: 0.3rem 1rem;
+    }
 }
 
 .right-section .right-image .hero_upper_icon img:first-child {
@@ -643,10 +691,6 @@ nav ul li a:hover::after {
     opacity: 0;
 }
 
-.cus-xx-large {
-    font-size: xx-large !important;
-}
-
 .b1 {
     position: absolute;
     top: 2%;
@@ -866,6 +910,12 @@ nav ul li a:hover::after {
     height: auto;
     min-width: 100%;
     display: block;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 .water-section {
@@ -977,6 +1027,11 @@ nav ul li a:hover::after {
 .fixed-logo {
     position: fixed;
     top: 0 !important;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .allaudience {
@@ -998,7 +1053,12 @@ nav ul li a:hover::after {
     right: -5%;
     width: 80%;
     height: auto;
-    object-fit: contain
+    object-fit: contain;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .desert-section .blackman-img1 {
@@ -1006,6 +1066,11 @@ nav ul li a:hover::after {
     top: -99rem;
     right: -18.9%;
     width: 41.4%;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .desert-section .blackman-stone1 {
@@ -1013,13 +1078,23 @@ nav ul li a:hover::after {
     width: 57%;
     top: -161rem;
     right: -53%;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .desert-section .blackman-img {
     position: absolute;
     top: 9rem;
     right: 46.1%;
-    width: 3.4%
+    width: 3.4%;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .block-text1 {
@@ -1052,14 +1127,24 @@ nav ul li a:hover::after {
     position: absolute;
     width: 10%;
     top: 18%;
-    right: 38%
+    right: 38%;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 .desertuper-section {
     background-color: #fff;
     padding: 45rem 2rem;
     width: 100%;
-    height: auto
+    height: auto;
+    -webkit-transition: all .1s ease;
+    -moz-transition: position 2s;
+    -ms-transition: position 2s;
+    -o-transition: position 2s;
+    transition: all .1s ease
 }
 
 
@@ -1169,7 +1254,7 @@ nav ul li a:hover::after {
 }
 
 .btn-price {
-    background-color: #3e495c;
+    background-color: #3e495c !important;
     color: #fff;
     padding: 1rem 3rem;
     white-space: pre
@@ -1271,11 +1356,11 @@ nav ul li a:hover::after {
 .meeting-container p {
     color: white;
     font-family: 'Special Elite', cursive;
-    font-size: 2vw;
+    font-size: 2.4vw;
     font-weight: 600;
-    padding: 2rem 7rem;
+    padding: 7rem 7rem;
     position: relative;
-    z-index: 20;
+    z-index: 101;
 }
 
 .responsive-mt {
@@ -1700,6 +1785,17 @@ nav ul li a:hover::after {
     .desert-section .centered {
         margin-top: 23%;
     }
+    .sky-section .left-text-2 p {
+        font-size: 1.5vw;
+    }
+    .columns {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.cus-xx-large {
+    font-size: 50px !important;
 }
 
 @media only screen and (max-width:600px) {
@@ -1865,7 +1961,7 @@ nav ul li a:hover::after {
     .sky-section .left-text-2 p {
         color: #3d465a;
         font-family: 'Special Elite', cursive;
-        font-size: 3.5vw;
+        font-size: 1.5vw;
         font-weight: 600
     }
     .btn-price {
@@ -2112,9 +2208,10 @@ nav ul li a:hover::after {
     .responsive-mt {
         margin-top: 0px;
     }
-    /* .whitehead2 {
+    .whitehead2 {
         font-size: 16px !important;
-    } */
+        /* transform: translate(-50%, -29%) scale(1); */
+    }
 }
 
 @media only screen and (max-width:400px) {
@@ -2274,14 +2371,14 @@ img#universal-arrow {
 
 .below-audiance-footer {
     background: #08536d;
-    height: 150px;
+    height: 100vh;
     width: 100%;
 }
 
 .below-audiance-footer p {
     color: white;
     font-family: 'Special Elite', cursive;
-    font-size: 1.8vw;
+    font-size: 2.4vw;
     font-weight: 600;
     text-align: center;
     line-height: 150px;
@@ -2289,12 +2386,54 @@ img#universal-arrow {
 }
 
 .below-meeting-container {
-    height: 300px;
-    background: linear-gradient(180deg, #1f282d 0%, transparent);
+    height: 70vh;
+    background: linear-gradient(180deg, #232832 5%, transparent);
+}
+
+div#child-section-content {
+    text-align: center;
 }
 
 img.sun_layer_8.img-responsive.img-fluid {
     z-index: 100;
+}
+
+.slider-container .card {
+    width: 100%;
+}
+
+
+/* .slider-container .container .row {
+    overflow: hidden;
+    height: 380px;
+} */
+
+.row.person-section {
+    overflow: hidden;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.row.flex-column.col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1536px;
+    overflow: hidden;
+    transition: 2.5s;
+}
+
+.row.flex-column.col-lg-3.roww2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -875px;
+    left: 0;
+    height: 1536px;
+    overflow: hidden;
+    transition: 2.5s;
 }
 
 @media (max-width: 1281px) {
@@ -2320,10 +2459,99 @@ img.sun_layer_8.img-responsive.img-fluid {
     .sun_layer-container {
         height: 450px;
     }
+    h1.whitehead2 {
+        transform: translate(-50%, -29%) scale(2.2);
+        top: -100%;
+    }
 }
 
 @media (max-width: 600px) {
     .sun_layer-container {
         height: 270px;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.pricing-table-heading {
+    color: #891b24;
+    font-weight: 700;
+}
+
+.price {
+    /* background: #891b24; */
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: black;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.price .header {
+    background-color: #fff;
+    color: black;
+    font-size: 27px !important;
+    font-weight: 600;
+}
+
+.price li {
+    /* border-bottom: 1px solid #eee; */
+    padding: 20px;
+    text-align: center;
+    font-size: calc(1rem + .6vw)!important;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.price-tag {
+    font-weight: 700;
+}
+
+.per-month {
+    font-size: 12px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #eee;
+}
+
+.expert {
+    border-top: 2px solid black;
+}
+
+.most-popular {
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    left: 46%;
+    border: 1px solid black;
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    background: white;
+    margin-top: -0.6rem;
+}
+
+@media (max-width :900px) {
+    .most-popular {
+        left: 42%;
+    }
+}
+
+@media (max-width: 900px) {
+    .most-popular {
+        left: 37%;
     }
 }

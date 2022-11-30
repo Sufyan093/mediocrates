@@ -1,12 +1,11 @@
 if (
     (
-        // AOS.init(),
+
         gsap.registerPlugin(ScrollTrigger),
         gsap.to(".blackhead", { scale: 0.2, duration: 1, scrollTrigger: { trigger: ".blackhead", scrub: !0, start: "top bottom" } }),
         gsap.to(".whitehead", { scale: 2.5, duration: 1, scrollTrigger: { trigger: ".whitehead", scrub: !0, start: "top 75%", end: '250% top' } }),
         gsap.to(".whitehead2", { scale: 1, y: "400%", duration: 1, scrollTrigger: { trigger: ".whitehead2", scrub: !0, start: "top 50%", end: '800% top' } }),
         gsap.to(".whitehead3", { scale: 2.5, duration: 1, scrollTrigger: { trigger: ".whitehead3", scrub: !0, start: "center center", end: '700% top' } }),
-        // gsap.to(".main-cloud", { scale: 2, transformOrigin: "bottom", duration: 1, scrollTrigger: { trigger: ".main-cloud", scrub: !0, start: "100% top", end: '250% ' } }),
         window.innerWidth < 600)
 ) {
     gsap
@@ -187,6 +186,7 @@ if (
                 // markers: true,
                 start: "-70% 50%",
                 // start: "15% 50%",
+                lazy: false,
                 scrub: !0,
                 toggleActions: "restart pause reverse pause"
             }
@@ -401,85 +401,11 @@ ScrollTrigger.matchMedia({
             .to(".statue2", { opacity: 0.6, y: '-5%', x: '-10%', ease: "power1.out" })
             .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
 
-        // gsap
-        //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
-        //     .from(".uppertext", { x: "-45%", duration: 2.5, ease: "back.out(2)" });
-
 
 
 
         // clouds laptop
 
-        // gsap.to('.cloud-1', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-1",
-        //         start: '-100% bottom',
-        //         markers: true,
-        //         toggleActions: "restart complete none reset" //
-        //     },
-        //     x: '-110vw',
-        //     duration: 30,
-        // });
-
-        // gsap.to(".cloud-2", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-2",
-        //         start: '-200% bottom',
-        //         markers: true,
-        //         toggleActions: "restart complete none reset" //
-        //     },
-        //     x: '120vw',
-        //     duration: 30,
-        // });
-
-        // gsap.to(".cloud-3", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-3",
-        //         start: '-300% bottom',
-        //         markers: true,
-        //         toggleActions: "restart complete none reset" //
-        //     },
-        //     x: '-110vw',
-        //     duration: 30,
-        // });
-
-        // gsap.to('.cloud-4', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-4",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -600,
-        //     y: 200,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-5", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-5",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: 600,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-6", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-6",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -300,
-        //     y: 200,
-        //     duration: 2,
-        // });
 
 
         gsap.to("#floater", {
@@ -491,7 +417,7 @@ ScrollTrigger.matchMedia({
                 toggleActions: "restart pause reverse pause",
             },
             duration: 10,
-            y: 150,
+            y: 250,
         });
 
         gsap.to(".left-text-2", {
@@ -505,38 +431,6 @@ ScrollTrigger.matchMedia({
             duration: 10,
             y: 150,
         });
-
-
-
-        // gsap.to(".desert-section .centered", {
-        //     scrollTrigger: {
-        //         trigger: ".desert-section .centered",
-        //         start: "100% 35%",
-        //         end: '1700%',
-        //         markers: true,
-        //         scrub: !0,
-        //         toggleActions: "restart pause reverse pause",
-        //     },
-        //     duration: 10,
-        //     y: 150,
-        // });
-
-        // gsap
-        //     .timeline({
-        //         scrollTrigger: {
-        //             trigger: ".left-text-sky-section",
-        //             start: "-50% center",
-        //             end: "-50% center",
-        //             markers: true,
-        //             // yoyo: true,
-        //             toggleActions: "restart none none none",
-
-        //         },
-        //     })
-
-        // .to(".left-text-sky-section", { opacity: 1, x: '53vw', })
-
-
 
     },
 
@@ -583,97 +477,11 @@ ScrollTrigger.matchMedia({
             .to(".statue3", { opacity: 0.6, ease: "power1.out" })
             .to(".statue2", { opacity: 0.6, y: '-5%', x: '-10%', ease: "power1.out" })
             .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
-            // gsap
-            //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "-10% bottom", scrub: !0, toggleActions: "restart pause reverse pause" } })
-            //     .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
-
-        // clouds  tab
-
-        // gsap.to('.cloud-1', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-1",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -600,
-        //     y: 50,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-2", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-2",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: 600,
-        //     y: -100,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-3", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-3",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -800,
-        //     duration: 2,
-        // });
-
-        // gsap.to('.cloud-4', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-4",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -600,
-        //     y: 200,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-5", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-5",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: 600,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-6", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-6",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -300,
-        //     y: 200,
-        //     duration: 2,
-        // });
-
 
 
     },
 
     "(max-width: 599px)": function() {
-
-        // gsap
-        //     .timeline({ scrollTrigger: { trigger: ".uppertext", start: "20% 90%", scrub: !0, toggleActions: "restart pause reverse pause" } })
-        //     .from(".uppertext", { x: "-40%", duration: 2.5, ease: "back.out(2)" });
 
         gsap
             .timeline({
@@ -713,142 +521,11 @@ ScrollTrigger.matchMedia({
             .to(".inner_p", { opacity: 1, x: '55vw', ease: "power1.out" })
 
         // clouds mobile
-
-        // gsap.to('.cloud-1', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-1",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -600,
-        //     y: 50,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-2", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-2",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: 600,
-        //     y: -100,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-3", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-3",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -800,
-        //     duration: 2,
-        // });
-
-        // gsap.to('.cloud-4', {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-4",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -600,
-        //     y: 200,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-5", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-5",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: 600,
-        //     duration: 2,
-        // });
-
-        // gsap.to(".cloud-6", {
-        //     scrollTrigger: {
-        //         trigger: ".cloud-6",
-        //         start: 'bottom bottom',
-        //         // markers: true,
-        //         scrub: true,
-        //         toggleActions: "restart pause reverse pause" //
-        //     },
-        //     x: -300,
-        //     y: 200,
-        //     duration: 2,
-        // });
-
     }
 
 })
 
 
-
-
-var slideSource = document.getElementById('scrolldown');
-
-function fadeing() {
-    slideSource.classList.toggle('fade');
-}
-if (window.innerHeight > 0) {
-    console.log(window.innerHeight);
-}
-
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    // console.log("scroll screen " + scroll);
-    if (scroll > 820) {
-        $('#scrolldown').css('opacity', '0');
-    } else {
-        $('#scrolldown').css('opacity', '1');
-    }
-});
-
-
-
-
-
-// gsap
-//     .timeline({
-//         scrollTrigger: {
-//             trigger: ".victorian",
-//             // markers: true,
-//             start: "-100% center",
-//             scrub: !0,
-//             toggleActions: "restart pause reverse pause"
-//         }
-//     })
-//     .to(".b3", {
-//         y: '-80%',
-//         ease: "none"
-//     })
-
-$(window).on('load', function() {
-    setTimeout(function() { // allowing 3 secs to fade out loader
-        $('.page-loader').fadeOut('slow');
-        $('body').css('overflow', 'unset');
-    }, 2000);
-
-    $(document).on('click', '.navbar-toggler', function() {
-        if ($('body').hasClass('overflowY_custome')) {
-            $("body").removeClass("overflowY_custome");
-        } else {
-            $("body").addClass("overflowY_custome");
-        }
-    });
-});
 
 
 gsap
@@ -892,45 +569,6 @@ gsap
     })
     .to(".water-section img", 1, { y: "-25%" })
 
-// gsap
-//     .timeline({
-//         scrollTrigger: {
-//             trigger: ".b7",
-//             start: "top 99%",
-//             end: "bottom top",
-//             scrub: !0,
-//             // markers: true,
-//             toggleActions: "restart none reverse none"
-//         }
-//     })
-//     .to(".b7", 1, { x: "45%" })
-
-// gsap
-//     .timeline({
-//         scrollTrigger: {
-//             trigger: ".b8",
-//             start: "top 99%",
-//             end: "bottom top",
-//             scrub: !0,
-//             // markers: true,
-//             toggleActions: "restart none reverse none"
-//         }
-//     })
-//     .to(".b8", 1, { x: "45%" })
-
-
-// window.onscroll = function() { scrollFunction() };
-
-// function scrollFunction() {
-//     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//         document.getElementById("header-logo").style.width = "70%";
-//     } else {
-//         document.getElementById("header-logo").style.width = "100%";
-//     }
-// }
-
-
-
 
 gsap.to(".b7", {
     scrollTrigger: {
@@ -970,30 +608,6 @@ gsap.to(".b4", {
 });
 
 
-
-
-$(document).on("scroll", function() {
-    if ($(document).scrollTop() > 100) {
-        $("#header-logo").addClass("shrink");
-        $('.sb-example-1 a').css('font-size', '17px');
-    } else {
-        $("#header-logo").removeClass("shrink");
-        $('.sb-example-1 a').css('font-size', '20px');
-    }
-
-    var innrheight = $(document).innerHeight();
-    var cal_innrheight = innrheight / 1.2;
-    console.log("documents " + innrheight);
-    console.log("document heigts " + cal_innrheight);
-
-    if ($(document).scrollTop() > cal_innrheight) {
-        $('#universal-arrow').addClass('cus_none_log');
-    } else {
-        $('#universal-arrow').removeClass('cus_none_log');
-    }
-
-});
-
 gsap.to(".below-audiance-footer p", {
     scrollTrigger: {
         trigger: ".below-audiance-footer p",
@@ -1003,7 +617,7 @@ gsap.to(".below-audiance-footer p", {
         toggleActions: "restart pause reverse pause",
     },
     duration: 10,
-    y: 100,
+    y: "100%",
 });
 
 gsap.to(".meeting-container p", {
@@ -1015,20 +629,22 @@ gsap.to(".meeting-container p", {
         toggleActions: "restart pause reverse pause",
     },
     duration: 5,
-    y: 100,
+    y: "200%",
 });
 
-gsap.to(".child-section h1, .child-section p", {
+gsap.to("#child-section-content", {
     scrollTrigger: {
-        trigger: ".child-section h1, .child-section p",
-        start: "top 95%",
+        trigger: "#child-section-content",
+        start: "top center",
+        end: '200% top',
         // markers: true,
         scrub: !0,
         toggleActions: "restart pause reverse pause",
     },
-    duration: 5,
-    y: 100,
+    duration: 10,
+    y: "200%",
 });
+
 
 gsap.to(".left-text-sky-section", {
     scrollTrigger: {
@@ -1053,49 +669,75 @@ gsap.to(".uppertext", {
         toggleActions: "restart pause reverse pause",
     },
     duration: 5,
-    y: "130%",
+    y: "200%",
 });
 
 
-// person-section
 
 
-gsap
-    .timeline({
-        scrollTrigger: {
-            trigger: ".person-section",
-            // markers: true,
-            start: "-10% 95%",
-            end: "100% 95%",
-            scrub: !0,
-            toggleActions: "restart none reverse none"
+
+var slideSource = document.getElementById('scrolldown');
+
+function fadeing() {
+    slideSource.classList.toggle('fade');
+}
+if (window.innerHeight > 0) {
+    console.log(window.innerHeight);
+}
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    // console.log("scroll screen " + scroll);
+    if (scroll > 820) {
+        $('#scrolldown').css('opacity', '0');
+    } else {
+        $('#scrolldown').css('opacity', '1');
+    }
+});
+
+$(window).on('load', function() {
+    setTimeout(function() { // allowing 3 secs to fade out loader
+        $('.page-loader').fadeOut('slow');
+        $('body').css('overflow', 'unset');
+    }, 2000);
+
+    $(document).on('click', '.navbar-toggler', function() {
+        if ($('body').hasClass('overflowY_custome')) {
+            $("body").removeClass("overflowY_custome");
+        } else {
+            $("body").addClass("overflowY_custome");
         }
-    })
-
-.to('.card-1', 1, { y: "-20%" }, '-=0.9')
-    .to(".card-2", 1, { y: "-40%" }, '-=0.9')
-    .to('.card-3', 1, { y: "-20%" }, '-=0.9')
-    .to(".card-4", 1, { y: "-30%" }, '-=0.9')
-    .to('.card-5', 1, { y: "-60%" }, '-=0.9')
-    .to(".card-6", 1, { y: "-60%" }, '-=0.20')
-    .to('.card-7', 1, { y: "-50%" }, '-=0.9')
-    .to(".card-8", 1, { y: "-50%" }, '-=0.20')
-    // .to('.card-1', 1, { y: "40%" }, '-=0.9')
-    // .to(".card-2", 1, { y: "-40%" }, '-=0.9')
-    // .to('.card-3', 1, { y: "40%" }, '-=0.9')
-    // .to(".card-4", 1, { y: "-40%" }, '-=0.9')
-    // .to('.card-5', 1, { y: "30%" }, '-=0.9')
-    // .to(".card-6", 1, { y: "-60%" }, '-=0.9')
-    // .to('.card-7', 1, { y: "30%" }, '-=0.9')
-    // .to(".card-8", 1, { y: "-60%" }, '-=0.9')
+    });
+});
 
 
+$(document).on("scroll", function() {
+    if ($(document).scrollTop() > 100) {
+        $("#header-logo").addClass("shrink");
+        $('.sb-example-1 a').css('font-size', '17px');
+    } else {
+        $("#header-logo").removeClass("shrink");
+        $('.sb-example-1 a').css('font-size', '20px');
+    }
+
+    var innrheight = $(document).innerHeight();
+    var cal_innrheight = innrheight / 1.2;
+    console.log("documents " + innrheight);
+    console.log("document heigts " + cal_innrheight);
+
+    if ($(document).scrollTop() > cal_innrheight) {
+        $('#universal-arrow').addClass('cus_none_log');
+    } else {
+        $('#universal-arrow').removeClass('cus_none_log');
+    }
+
+});
 
 
 var scrollTimer = -1;
 
 function bodyScroll() {
-    $('#universal-arrow').hide();
+    $('#universal-arrow').fadeOut();
 
     if (scrollTimer != -1)
         clearTimeout(scrollTimer);
@@ -1104,5 +746,5 @@ function bodyScroll() {
 }
 
 function scrollFinished() {
-    $('#universal-arrow').show();
+    $('#universal-arrow').fadeIn();
 }
